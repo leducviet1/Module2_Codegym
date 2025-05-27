@@ -1,3 +1,5 @@
+package shape;
+
 public class Shape {
     public String color = "green";
     public boolean filled = true;
