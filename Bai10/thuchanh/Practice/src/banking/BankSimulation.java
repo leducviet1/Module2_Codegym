@@ -43,7 +43,7 @@ public class BankSimulation {
                 Customer customer = new Customer("Khách_" + i,nextCustomerId++);
                 customerQueue.add(customer);
             }
-            System.out.println("✅ Đã thêm 10 khách hàng vào hàng đợi.");
+            System.out.println(" Đã thêm 10 khách hàng vào hàng đợi.");
         }
 
         private static void serveNextCustomers() {
@@ -53,7 +53,7 @@ public class BankSimulation {
                     if (!customerQueue.isEmpty()) {
                         Customer next = customerQueue.poll();
                         counter.serveCustomer(next);
-                        System.out.println("➡ Quầy " + counter.getId() + " phục vụ " + next.getName());
+                        System.out.println(" Quầy " + counter.getId() + " phục vụ " + next.getName());
                         served = true;
                     }
                 } else {
@@ -69,9 +69,9 @@ public class BankSimulation {
 
         private static void showQueue() {
             if (customerQueue.isEmpty()) {
-                System.out.println("📭 Hàng đợi trống.");
+                System.out.println(" Hàng đợi trống.");
             } else {
-                System.out.println("📋 Danh sách khách đang chờ:");
+                System.out.println(" Danh sách khách đang chờ:");
                 for (Customer c : customerQueue) {
                     System.out.println(" - " + c);
                 }
@@ -79,7 +79,7 @@ public class BankSimulation {
         }
 
         private static void showCounters() {
-            System.out.println("🏦 Trạng thái các quầy:");
+            System.out.println(" Trạng thái các quầy:");
             for (Counter counter : counters) {
                 System.out.println(" - Quầy " + counter.getId() + ": " + counter.getStatus());
             }
